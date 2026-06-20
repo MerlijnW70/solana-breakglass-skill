@@ -90,7 +90,13 @@ Suspicious fund movement  -> incidents/suspicious-drain.md
 Unsafe wallet prompt      -> incidents/frontend-compromise.md
 Upgrade / admin risk      -> incidents/compromised-upgrade-authority.md
 Explorer/RPC disagreement -> incidents/rpc-degradation.md
+Chain halted / restart    -> incidents/cluster-halt.md
+Bridge / cross-chain      -> incidents/bridge-exploit.md
+Governance attack         -> incidents/governance-attack.md
+Oracle / AMM manipulation -> incidents/oracle-amm-manipulation.md
+Social account takeover   -> incidents/social-account-takeover.md
 Public pressure / comms   -> communications/public-status-update.md
+Anything else / novel     -> incidents/unknown-incident.md
 ```
 
 ## Operating discipline

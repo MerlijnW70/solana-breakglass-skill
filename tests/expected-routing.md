@@ -27,7 +27,13 @@ unsafe wallet prompt      -> skill/incidents/frontend-compromise.md
 upgrade/admin risk        -> skill/incidents/compromised-upgrade-authority.md
                           +  skill/forensics/program-authority-analysis.md
 explorer disagreement     -> skill/incidents/rpc-degradation.md
+chain halted / restart    -> skill/incidents/cluster-halt.md
+bridge / cross-chain      -> skill/incidents/bridge-exploit.md
+governance attack         -> skill/incidents/governance-attack.md
+oracle / AMM manipulation -> skill/incidents/oracle-amm-manipulation.md
+social account takeover   -> skill/incidents/social-account-takeover.md
 public pressure           -> skill/communications/public-status-update.md
+anything else / novel     -> skill/incidents/unknown-incident.md  (catch-all)
 ```
 
 ## Severity routing

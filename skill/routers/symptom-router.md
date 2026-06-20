@@ -26,8 +26,26 @@ Upgrade or admin authority risk
 Explorer / RPC disagreement
   -> incidents/rpc-degradation.md
 
+Network-wide failure / chain halted / restart
+  -> incidents/cluster-halt.md
+
+Bridge / cross-chain accounting mismatch
+  -> incidents/bridge-exploit.md
+
+Hostile or suspicious governance proposal
+  -> incidents/governance-attack.md
+
+Bad pricing / liquidations / oracle or pool manipulation
+  -> incidents/oracle-amm-manipulation.md
+
+Team social / announcement channel posting scams
+  -> incidents/social-account-takeover.md
+
 Public pressure / needing a statement
   -> communications/public-status-update.md
+
+Anything else / doesn't match / novel
+  -> incidents/unknown-incident.md   (the catch-all — never leave a situation unrouted)
 ```
 
 ## How to read a symptom
