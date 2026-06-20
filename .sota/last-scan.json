@@ -3,6 +3,15 @@
   "mode": "standard",
   "domains": ["ai-agent-incident-response-skill"],
   "rubric_version": 1,
+  "since_last_scan": {
+    "prev_tier": "COMPETITIVE",
+    "prev_coverage_pct": 75,
+    "newly_met": ["skill-frontmatter", "evaluations", "versioning", "ci-validation"],
+    "newly_lost": [],
+    "field_added": [],
+    "field_dropped": [],
+    "rubric_changed": false
+  },
   "cluster": {
     "detected": "ai-agent-domain-skill",
     "confidence": "high",
@@ -12,7 +21,7 @@
     "excluded": ["hesreallyhim/awesome-claude-code (index list)", "karanb192/awesome-claude-skills (index list)"]
   },
   "field": [
-    { "repo": "anthropics/skills", "type": "canonical", "stars": 153034, "pushed": "2026-06-09", "archived": false },
+    { "repo": "anthropics/skills", "type": "canonical", "stars": 153036, "pushed": "2026-06-09", "archived": false },
     { "repo": "Sushegaad/Claude-Skills-Governance-Risk-and-Compliance", "type": "niche-relevant", "stars": 666, "pushed": "2026-06-17", "archived": false },
     { "repo": "sota-scan", "type": "niche-relevant", "stars": null, "pushed": "2026-06-16", "archived": false, "note": "local peer; engineering bar" },
     { "repo": "aws-samples/aws-incident-response-playbooks", "type": "reference", "stars": 1061, "pushed": "2026-06-18", "archived": false },
@@ -21,20 +30,21 @@
   ],
   "matrix": [
     { "id": "skill-entry-structure", "us": "met", "tier": "table-stakes" },
-    { "id": "skill-frontmatter", "us": "missing", "tier": "table-stakes" },
+    { "id": "skill-frontmatter", "us": "met", "tier": "table-stakes" },
     { "id": "progressive-disclosure", "us": "met", "tier": "table-stakes" },
     { "id": "license", "us": "met", "tier": "table-stakes" },
     { "id": "readme-install", "us": "met", "tier": "table-stakes" },
     { "id": "in-skill-safety", "us": "met", "tier": "table-stakes" },
     { "id": "automated-tests", "us": "met", "tier": "table-stakes" },
-    { "id": "evaluations", "us": "partial", "tier": "table-stakes" },
+    { "id": "evaluations", "us": "met", "tier": "table-stakes" },
     { "id": "plugin-marketplace-packaging", "us": "missing", "tier": "edge" },
-    { "id": "versioning", "us": "missing", "tier": "edge" },
-    { "id": "ci-validation", "us": "missing", "tier": "edge" },
+    { "id": "versioning", "us": "met", "tier": "edge" },
+    { "id": "ci-validation", "us": "met", "tier": "edge" },
     { "id": "mitre-attack-mapping", "us": "missing", "tier": "edge" }
   ],
-  "coverage": { "met": 6, "partial": 1, "missing": 1, "total": 8, "pct": 75 },
-  "tier": "COMPETITIVE",
-  "gaps_total": 2,
-  "content_cluster_note": "IR-playbook content table-stakes (roles/IC, comms, evidence handling, postmortem, contain->recover phases) are ALL met, plus an explicit SEV0-4 model stronger than any reference template and safety/guardrails the direct skill peers lack."
+  "coverage": { "met": 8, "partial": 0, "missing": 0, "total": 8, "pct": 100 },
+  "tier": "FRONTIER",
+  "gaps_total": 0,
+  "edge_remaining": ["plugin-marketplace-packaging (positioning call)", "mitre-attack-mapping (optional cross-cluster idea)"],
+  "content_cluster_note": "IR-playbook content table-stakes all met, plus an explicit SEV0-4 model and safety/guardrails the direct skill peers lack."
 }
