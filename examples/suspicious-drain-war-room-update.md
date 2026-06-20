@@ -3,6 +3,24 @@
 An illustrative internal war-room update during a suspected drain. Fictional
 values. Internal audience; still no secrets, still confidence-labeled.
 
+## At a glance
+
+```text
+🟠 SEV1 · Suspicious treasury drain · confidence: LIKELY
+
+DO NOW
+  1. Confirm there are no further outflows since 14:05   [read-only]
+  2. Trace the 40k destination one hop                   [read-only]
+  3. Prep a containment proposal for the multisig         [prepare]
+
+NEED                       DON'T
+  • a 2nd multisig signer     • move or "rescue" funds
+  • the full account diff     • name or attribute an attacker
+  • treasury auth config      • share or request any key/seed
+
+NEXT  decide stop-deposits by 14:30 · forensics/account-diff-analysis.md
+```
+
 ## Update
 
 ```text

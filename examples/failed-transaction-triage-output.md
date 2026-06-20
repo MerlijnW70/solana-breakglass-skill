@@ -4,6 +4,19 @@ An illustrative, safe output for an engineer triaging failures after a deploy.
 Values are fictional. Format follows engineer debug mode plus the incident output
 contract.
 
+## At a glance
+
+```text
+🟡 IDL_PROGRAM_MISMATCH · confidence: LIKELY
+
+NEXT 3 CHECKS (read-only)
+  1. Diff the deployed program/IDL vs the client IDL
+  2. Reproduce one failing signature in simulation
+  3. Confirm no fund movement around the deploy window
+
+NEED  • deployed vs client IDL    PROBABLE FIX  ship updated IDL / roll back deploy
+```
+
 ## Triage
 
 ```text

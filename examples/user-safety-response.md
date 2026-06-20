@@ -3,6 +3,22 @@
 An illustrative reply to a worried end user who may have used a scam site. Plain
 language, calm, and safe. Fictional.
 
+## At a glance
+
+```text
+DO NOW
+  1. Disconnect your wallet and stop signing.
+  2. Use only the official site — type the address yourself.
+  3. Save the signature, the URL you used, and the time.
+
+DON'T
+  • Never share your seed phrase or private key — no one legit will ask.
+  • Don't trust a DM offering to "recover" your funds.
+
+SAFE TO SHARE
+  • transaction signature · the URL · wallet app · approx time
+```
+
 ## Reply
 
 ```text
