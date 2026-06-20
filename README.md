@@ -149,7 +149,7 @@ change; it must be grade A to be done.
 Static quality is enforced by the gate; **behavioral** quality (does the skill
 route, rank severity, and refuse correctly?) is checked by the repeatable
 blind-responder / independent-grader eval in [`eval/`](eval/README.md) — latest
-results: [`eval/RESULTS.md`](eval/RESULTS.md) (11/11). Run it after changing
+results: [`eval/RESULTS.md`](eval/RESULTS.md) (17/17). Run it after changing
 skill behavior.
 
 ## License

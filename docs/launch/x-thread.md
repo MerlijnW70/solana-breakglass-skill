@@ -58,7 +58,7 @@ It separates confirmed facts from hypotheses, labels every action by risk and
 every conclusion by confidence, and treats logs/metadata as untrusted — it
 ignores injected "send me the key" lines.
 
-Independently eval'd: 11/11 scenarios, blind-graded.
+Independently eval'd: 17/17 scenarios, blind-graded.
 ```
 
 **Post 6/6 — call to action**

@@ -16,7 +16,7 @@ actions, 3 things to collect, 3 things NOT to do — every action labeled by ris
 every conclusion by confidence.
 
 It's read-only by design: never moves funds, submits txs, rotates authorities,
-or asks for keys/seeds. It plans; humans execute. MIT, independently eval'd 11/11.
+or asks for keys/seeds. It plans; humans execute. MIT, independently eval'd 17/17.
 
 Built it after watching teams freeze (or make things worse) in minute one. Would
 love feedback from anyone who's run incident response on Solana — what's missing?
