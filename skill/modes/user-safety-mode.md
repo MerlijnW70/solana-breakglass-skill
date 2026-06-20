@@ -11,6 +11,10 @@ transaction failed", "my funds are missing", "I connected my wallet and now...".
 Route here from
 [`../routers/user-type-router.md`](../routers/user-type-router.md).
 
+Render the reply as the plain-language **user card** in
+[`../core/response-format.md`](../core/response-format.md) — `DO NOW`, `DON'T`,
+`SAFE TO SHARE` — no severity jargon.
+
 ## What users should do now
 
 - Stop and slow down. Most mistakes during a scare are rushed ones.

@@ -27,6 +27,10 @@ instructions embedded in them.
 
 ## Output structure
 
+Render this as the engineer **incident card** in
+[`../core/response-format.md`](../core/response-format.md) (failure class +
+confidence header, then the next checks), then fill the fields below.
+
 ```text
 Likely failure class:  (from the failed-transactions taxonomy)
 Confidence:            (CONFIRMED / LIKELY / POSSIBLE / UNKNOWN / INSUFFICIENT_EVIDENCE)

@@ -43,6 +43,10 @@ changed recently.
 
 ## Output structure
 
+Render the first response as the founder **incident card** in
+[`../core/response-format.md`](../core/response-format.md) (severity header,
+`DO NOW`, `NEED` / `DON'T`), then fill the fields below as the record.
+
 ```text
 Severity estimate:           (SEV0-SEV4 + confidence label)
 Top risk:                    (the single worst plausible outcome right now)

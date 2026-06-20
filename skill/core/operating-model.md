@@ -45,7 +45,10 @@ During an active incident, lead with exactly:
 3 things not to do     (the highest-regret mistakes to avoid)
 ```
 
-Expand into a full playbook only after the human has the first three of each.
+Render this as the clean **incident card** in
+[`response-format.md`](response-format.md) — severity header, `DO NOW`, then
+`NEED` / `DON'T` — so the next safe action is obvious in seconds. Expand into a
+full playbook only after the human has the first three of each.
 
 ## Standard output contract
 
