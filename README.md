@@ -124,6 +124,11 @@ quality gate. The build plan lives in
 [`docs/breakglass-dev.md`](docs/breakglass-dev.md). Run `nh check` to grade a
 change; it must be grade A to be done.
 
+Static quality is enforced by the gate; **behavioral** quality (does the skill
+route, rank severity, and refuse correctly?) is checked by the repeatable
+blind-responder / independent-grader eval in [`eval/`](eval/README.md). Run it
+after changing skill behavior.
+
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
