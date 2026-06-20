@@ -35,6 +35,8 @@ Next update:
   investigating".
 - Pair with the anti-scam reminder (no DMs, never asks for seed phrases) from
   [`../modes/user-safety-mode.md`](../modes/user-safety-mode.md).
+- Translate jargon for a public audience with
+  [`plain-language-glossary.md`](plain-language-glossary.md).
 
 ## Template
 

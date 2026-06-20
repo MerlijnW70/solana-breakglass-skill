@@ -33,7 +33,8 @@ Suggested wording:    "As a precaution, we've paused new deposits to <product>
   both. Do not imply existing funds are safe unless evidence supports it.
 - Confirm whether the halt is an app-layer toggle (reversible) or an on-chain
   privileged instruction (treat as
-  [IRREVERSIBLE][MULTISIG_REQUIRED][SECURITY_REVIEW]) before acting.
+  [IRREVERSIBLE][MULTISIG_REQUIRED][SECURITY_REVIEW][DO_NOT_AUTOMATE]) before
+  acting.
 - Plan containment via
   [`../recovery/containment-options.md`](../recovery/containment-options.md); the
   skill prepares the plan, humans execute it.

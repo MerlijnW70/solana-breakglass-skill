@@ -58,8 +58,8 @@ dependency compromise
 
 ## Risky actions
 
-- `[REVERSIBLE]` Roll back to a known-good build only after verifying that build
-  is itself clean.
+- `[REVERSIBLE][PREPARE_ONLY]` Plan a rollback to a known-good build for humans
+  to execute — and only after verifying that build is itself clean.
 
 ## Actions not to take yet
 

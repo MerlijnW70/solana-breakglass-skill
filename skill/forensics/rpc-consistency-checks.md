@@ -18,7 +18,8 @@ Over time            does a "failure" resolve on retry a few seconds later?
 
 1. Pick the disputed fact (a signature's status, an account balance).
 2. Query it on at least two independent RPC providers.
-3. Query at confirmed and finalized commitment; note differences.
+3. Query at processed, confirmed, and finalized commitment; note differences —
+   a result visible at processed/confirmed but not finalized is the classic lag.
 4. If providers agree and only the explorer/wallet disagrees, the chain is fine
    and the issue is indexing/caching (`RPC_INDEXING_LAG`, adapter issue).
 5. If independent providers disagree at finalized, escalate — this may be real.

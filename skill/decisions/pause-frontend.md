@@ -34,5 +34,9 @@ Suggested wording:    "We've temporarily paused <product> while we investigate a
 - If the suspected cause is a frontend compromise, work
   [`../incidents/frontend-compromise.md`](../incidents/frontend-compromise.md)
   before un-pausing, and verify the build hash first.
+- This card covers an **app-layer** pause (reversible). If the only way to pause
+  is an on-chain guardian/admin instruction, that is `[MULTISIG_REQUIRED]` and
+  may be `[IRREVERSIBLE]` — treat it like the on-chain path in
+  [`stop-deposits.md`](stop-deposits.md), not as a quick toggle.
 - Record the decision and its reversal condition in
   [`../core/decision-log.md`](../core/decision-log.md).

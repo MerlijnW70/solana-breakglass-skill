@@ -54,3 +54,5 @@ Turn corrective actions into monitoring and hygiene improvements via
 and [`../hardening/authority-hygiene.md`](../hardening/authority-hygiene.md). A
 worked example lives in
 [`../../examples/postmortem-example.md`](../../examples/postmortem-example.md).
+Once recovery is validated, the public-facing writeup is the
+[`trust-recovery-update.md`](trust-recovery-update.md).

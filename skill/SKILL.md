@@ -75,6 +75,7 @@ Engineer                  -> modes/engineer-debug-mode.md
 Solo builder              -> modes/solo-operator-mode.md
 Support / moderator       -> communications/support-macros.md
 Pre-launch team           -> modes/readiness-review-mode.md
+After the incident        -> communications/postmortem-template.md
 ```
 
 ## Then route by incident type

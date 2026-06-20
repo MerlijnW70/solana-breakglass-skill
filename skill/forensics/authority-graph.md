@@ -21,7 +21,7 @@ Inactive signers:
 Treasury owner:
 Mint authority:
 Freeze authority:
-Close authority:
+Close authority:        (token-account level; mint-level only via Token-2022 Mint Close ext.)
 Oracle authority:
 Crank authority:
 ```

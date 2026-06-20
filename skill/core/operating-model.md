@@ -78,3 +78,13 @@ Postmortem notes:
   ([`data-handling.md`](data-handling.md)).
 - Read-only by default. Never request secrets, submit transactions, move funds,
   or mutate authorities automatically.
+
+These boundaries are enforced as the rules in [`../../rules/`](../../rules/):
+[read-only-default](../../rules/read-only-default.md),
+[no-autonomous-transactions](../../rules/no-autonomous-transactions.md),
+[irreversible-action-labeling](../../rules/irreversible-action-labeling.md),
+[evidence-before-advice](../../rules/evidence-before-advice.md),
+[no-legal-or-attribution-overclaims](../../rules/no-legal-or-attribution-overclaims.md),
+[agent-safety](../../rules/agent-safety.md),
+[untrusted-evidence](../../rules/untrusted-evidence.md), and
+[data-handling](../../rules/data-handling.md).

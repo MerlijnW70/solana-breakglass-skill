@@ -11,7 +11,7 @@ Mint address           the token mint in question
 Token program          classic SPL Token vs Token-2022
 Mint authority         who can mint new supply (or None)
 Freeze authority       who can freeze token accounts (or None)
-Close authority         who can close accounts (where applicable)
+Close authority         who can close a token account; for a MINT only via the Token-2022 Mint Close extension
 Supply                 current supply; any recent unexpected change?
 Token-2022 extensions  transfer hooks, transfer fees, permanent delegate, etc.
 ```

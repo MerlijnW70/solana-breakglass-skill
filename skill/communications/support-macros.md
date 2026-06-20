@@ -65,4 +65,7 @@ for your patience.
 No promises of reimbursement, no blame, no "resolved"/"funds are safe" without
 evidence, and never a request for secrets. See
 [`public-status-update.md`](public-status-update.md) and
-[`../modes/user-safety-mode.md`](../modes/user-safety-mode.md).
+[`../modes/user-safety-mode.md`](../modes/user-safety-mode.md). Gather safe user
+evidence with [`../intake/user-report-intake.md`](../intake/user-report-intake.md)
+and translate jargon with
+[`plain-language-glossary.md`](plain-language-glossary.md).

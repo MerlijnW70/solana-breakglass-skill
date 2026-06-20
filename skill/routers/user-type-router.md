@@ -13,6 +13,7 @@ ask one clarifying question.
  what do we say"                                -> modes/founder-first-10.md
 "Here are logs / tx signature / Anchor error"   -> modes/engineer-debug-mode.md
 "I'm alone / solo / small team"                 -> modes/solo-operator-mode.md
+"Support / a user reported / macro reply"       -> communications/support-macros.md
 "After the incident / postmortem"               -> communications/postmortem-template.md
 "Before launch / review our setup"              -> modes/readiness-review-mode.md
 ```

@@ -51,6 +51,9 @@ Incident readiness gaps:   (roles, runbooks, comms, tabletop not yet in place)
 - **Incident readiness** — roles, decision cards, comms templates, and a
   rehearsed tabletop. See
   [`../hardening/tabletop-exercises.md`](../hardening/tabletop-exercises.md).
+- **Disclosure path** — a published security contact so researchers can reach
+  you before going public. See
+  [`../hardening/security-txt.md`](../hardening/security-txt.md).
 
 ## Output discipline
 
