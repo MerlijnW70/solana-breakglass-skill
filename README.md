@@ -4,6 +4,26 @@
 
 [![gate](https://github.com/MerlijnW70/solana-breakglass-skill/actions/workflows/gate.yml/badge.svg)](https://github.com/MerlijnW70/solana-breakglass-skill/actions/workflows/gate.yml)
 
+When a Solana incident hits, it answers one question — *what do we know, what's
+at risk, what's the next safe action?* — as a calm, skimmable card:
+
+```text
+🟠 SEV1 · Suspicious drain · confidence: POSSIBLE
+
+DO NOW
+  1. Confirm the outflow on-chain and size it       [read-only]
+  2. Check the signer against known admins          [read-only]
+  3. Draft a containment proposal for the multisig   [prepare]
+
+NEED                       DON'T
+  • the signing authority    • move or "rescue" funds
+  • a full account diff      • name or attribute an attacker
+  • recent authority changes • share or request any key/seed
+```
+
+Read-only by design — it **never** moves funds, submits transactions, rotates
+authorities, or asks for your keys. It plans; humans execute.
+
 Breakglass for Solana is an evidence-first crisis operations skill for Solana
 founders and engineers. It helps AI coding agents triage failed transactions,
 suspicious drains, compromised authorities, RPC degradation, frontend
