@@ -76,7 +76,9 @@ What incident should it cover next?
 ## Notes
 
 - The single highest-leverage asset is the **card screenshot** on post 2 — make
-  it crisp and legible.
+  it crisp and legible. Generate it with `bin/render-card.sh` (`drain` / `failed`
+  / `user`), then screenshot your terminal — or record a few seconds with
+  asciinema for a GIF.
 - A good first reply to your own thread: a 20-second screen capture of a triage
   in action (the eval or a live card render).
 - Tag sparingly and only where genuinely relevant; a thoughtful reply to a
