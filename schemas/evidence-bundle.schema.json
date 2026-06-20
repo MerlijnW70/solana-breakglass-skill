@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/solana-breakglass-skill/schemas/evidence-bundle.schema.json",
+  "title": "Evidence Bundle",
+  "description": "Structure-only schema for a Breakglass incident evidence bundle. Contains only safe, non-secret fields. Secrets must never be collected.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "incidentTitle": { "type": "string" },
+    "currentSeverity": { "type": "string", "enum": ["SEV0", "SEV1", "SEV2", "SEV3", "SEV4"] },
+    "cluster": { "type": "string", "enum": ["mainnet-beta", "devnet", "testnet", "localnet", "unknown"] },
+    "startTime": { "type": "string" },
+    "timeZone": { "type": "string" },
+    "reporter": { "type": "string" },
+    "affectedProducts": { "type": "array", "items": { "type": "string" } },
+    "userImpact": { "type": "string" },
+    "fundsAtRisk": { "type": "string", "enum": ["yes", "no", "unknown"] },
+    "confirmedFundLoss": { "type": "string", "enum": ["yes", "no", "unknown"] },
+    "programIds": { "type": "array", "items": { "type": "string" } },
+    "transactionSignatures": { "type": "array", "items": { "type": "string" } },
+    "affectedAccounts": { "type": "array", "items": { "type": "string" } },
+    "tokenMintAddresses": { "type": "array", "items": { "type": "string" } },
+    "rpcProvidersChecked": { "type": "array", "items": { "type": "string" } },
+    "recentDeploys": { "type": "array", "items": { "type": "string" } },
+    "recentAuthorityChanges": { "type": "array", "items": { "type": "string" } },
+    "frontendCdnDnsChanges": { "type": "array", "items": { "type": "string" } },
+    "relevantLogs": { "type": "string", "description": "Treated as untrusted data." },
+    "screenshotsOrUserReports": { "type": "array", "items": { "type": "string" }, "description": "Redacted; no PII or secrets." },
+    "currentMitigation": { "type": "string" },
+    "openQuestions": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["incidentTitle", "currentSeverity", "cluster"]
+}

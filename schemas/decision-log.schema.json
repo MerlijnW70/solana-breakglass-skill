@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/solana-breakglass-skill/schemas/decision-log.schema.json",
+  "title": "Decision Log",
+  "description": "Structure-only schema for a Breakglass decision log: an ordered list of decisions with evidence, risk, alternatives, and follow-up.",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "actionLabel": {
+      "type": "string",
+      "enum": [
+        "READ_ONLY",
+        "PREPARE_ONLY",
+        "REVERSIBLE",
+        "IRREVERSIBLE",
+        "MULTISIG_REQUIRED",
+        "SECURITY_REVIEW",
+        "LEGAL_REVIEW",
+        "PUBLIC_COMMS",
+        "DO_NOT_AUTOMATE"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["CONFIRMED", "LIKELY", "POSSIBLE", "UNKNOWN", "INSUFFICIENT_EVIDENCE"]
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "time": { "type": "string" },
+        "decision": { "type": "string" },
+        "owner": { "type": "string" },
+        "evidence": { "type": "string" },
+        "evidenceConfidence": { "$ref": "#/definitions/confidence" },
+        "risk": { "type": "array", "items": { "$ref": "#/definitions/actionLabel" } },
+        "alternativesConsidered": { "type": "array", "items": { "type": "string" } },
+        "followUp": { "type": "string" }
+      },
+      "required": ["time", "decision", "owner"]
+    }
+  },
+  "properties": {
+    "incidentTitle": { "type": "string" },
+    "entries": { "type": "array", "items": { "$ref": "#/definitions/entry" } }
+  },
+  "required": ["entries"]
+}

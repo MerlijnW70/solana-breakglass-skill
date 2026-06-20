@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/solana-breakglass-skill/schemas/authority-graph.schema.json",
+  "title": "Authority Graph",
+  "description": "Structure-only schema for a Breakglass authority graph: on-chain authorities and the off-chain control plane, each with a risk label.",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "riskLabel": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+    "authorityEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "value": { "type": "string", "description": "Public identifier/address or description. Never a secret." },
+        "holderType": { "type": "string", "enum": ["key", "multisig", "governance", "none", "unknown"] },
+        "risk": { "$ref": "#/definitions/riskLabel" },
+        "notes": { "type": "string" }
+      },
+      "required": ["name", "risk"]
+    }
+  },
+  "properties": {
+    "onChain": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "programId": { "type": "string" },
+        "programDataAccount": { "type": "string" },
+        "multisigThreshold": { "type": "string" },
+        "activeSigners": { "type": "array", "items": { "type": "string" } },
+        "inactiveSigners": { "type": "array", "items": { "type": "string" } },
+        "entries": { "type": "array", "items": { "$ref": "#/definitions/authorityEntry" } }
+      }
+    },
+    "offChain": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "entries": { "type": "array", "items": { "$ref": "#/definitions/authorityEntry" } }
+      }
+    }
+  },
+  "required": ["onChain", "offChain"]
+}
