@@ -1,32 +1,31 @@
 {
   "date": "2026-06-20",
   "mode": "standard",
+  "note": "Same-day re-scan. Field + rubric (v1) reused from the prior run (domain unchanged within the day); us re-scored fresh against the saved rubric and verified for regressions.",
   "domains": ["ai-agent-incident-response-skill"],
   "rubric_version": 1,
   "since_last_scan": {
-    "prev_tier": "COMPETITIVE",
-    "prev_coverage_pct": 75,
-    "newly_met": ["skill-frontmatter", "evaluations", "versioning", "ci-validation"],
+    "prev_tier": "FRONTIER",
+    "prev_coverage_pct": 100,
+    "newly_met": [],
     "newly_lost": [],
-    "field_added": [],
-    "field_dropped": [],
-    "rubric_changed": false
+    "rubric_changed": false,
+    "quality_improvements_within_met_capabilities": [
+      "added skill/core/response-format.md presentation layer (clean incident card); wired into modes + examples",
+      "deep self-audit remediation: routing tables now 1:1, 3 safety wording nits fixed, 2 Solana-accuracy clarifications, orphan modules wired",
+      "README hero shows the card; launch kit added (docs/launch/); repo description + 10 topics set for discovery"
+    ]
   },
   "cluster": {
     "detected": "ai-agent-domain-skill",
     "confidence": "high",
-    "why": "Breakglass is a progressive-disclosure Agent Skill (SKILL.md + routed modules) whose content domain is Solana incident response; its direct peers are other published domain skills, not human IR runbooks.",
     "direct_comparators": ["anthropics/skills", "Sushegaad/Claude-Skills-Governance-Risk-and-Compliance", "sota-scan"],
-    "broader_references": ["counteractive/incident-response-plan-template", "aws-samples/aws-incident-response-playbooks", "austinsonger/Incident-Playbook", "PagerDuty/incident-response-docs", "monzo/response"],
-    "excluded": ["hesreallyhim/awesome-claude-code (index list)", "karanb192/awesome-claude-skills (index list)"]
+    "broader_references": ["counteractive/incident-response-plan-template", "aws-samples/aws-incident-response-playbooks", "austinsonger/Incident-Playbook"]
   },
   "field": [
-    { "repo": "anthropics/skills", "type": "canonical", "stars": 153036, "pushed": "2026-06-09", "archived": false },
+    { "repo": "anthropics/skills", "type": "canonical", "stars": 153146, "pushed": "2026-06-09", "archived": false },
     { "repo": "Sushegaad/Claude-Skills-Governance-Risk-and-Compliance", "type": "niche-relevant", "stars": 666, "pushed": "2026-06-17", "archived": false },
-    { "repo": "sota-scan", "type": "niche-relevant", "stars": null, "pushed": "2026-06-16", "archived": false, "note": "local peer; engineering bar" },
-    { "repo": "aws-samples/aws-incident-response-playbooks", "type": "reference", "stars": 1061, "pushed": "2026-06-18", "archived": false },
-    { "repo": "counteractive/incident-response-plan-template", "type": "stale-reference", "stars": 784, "pushed": "2024-05-07", "archived": false },
-    { "repo": "austinsonger/Incident-Playbook", "type": "stale-reference", "stars": 1575, "pushed": "2024-07-28", "archived": false }
+    { "repo": "sota-scan", "type": "niche-relevant", "stars": null, "pushed": "2026-06-16", "archived": false, "note": "local peer; engineering bar" }
   ],
   "matrix": [
     { "id": "skill-entry-structure", "us": "met", "tier": "table-stakes" },
@@ -46,5 +45,5 @@
   "tier": "FRONTIER",
   "gaps_total": 0,
   "edge_remaining": ["plugin-marketplace-packaging (positioning call)", "mitre-attack-mapping (optional cross-cluster idea)"],
-  "content_cluster_note": "IR-playbook content table-stakes all met, plus an explicit SEV0-4 model and safety/guardrails the direct skill peers lack."
+  "no_regressions": "gate grade A; CI success on HEAD (16bde57); eval 11/11; all internal links resolve"
 }
