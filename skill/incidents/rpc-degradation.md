@@ -25,9 +25,12 @@ disagreement. Verify with
 ## Severity rules
 
 ```text
-SEV2  many users see failures/disagreement; no confirmed fund loss
-SEV3  isolated, with a workaround (retry, switch provider, raise commitment)
-SEV1+ if disagreement is masking real fund movement — verify before downgrading
+SEV3  default: an isolated explorer/RPC/wallet disagreement with NO unexplained
+      on-chain movement (e.g. a single "did my tx go through?" report)
+SEV2  many users see the disagreement/failures; still no confirmed fund loss
+SEV1+ ONLY if a real loss indicator appears beyond the visibility mismatch — an
+      unexplained outflow or an unknown signer. A user merely asking "are funds
+      lost?" is not, by itself, such an indicator; verify read-only first.
 ```
 
 ## Distinguish

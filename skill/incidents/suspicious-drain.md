@@ -67,12 +67,16 @@ naming of real-world identities, no on-chain attribution presented as fact.
 ## Safe actions
 
 - `[READ_ONLY]` Confirm the movement is real on-chain and quantify it.
-- `[READ_ONLY]` Identify the signer/authority and check it against known admins.
+- `[READ_ONLY]` Identify the signer/authority and check it against known admins
+  in [`../forensics/authority-graph.md`](../forensics/authority-graph.md).
 - `[PREPARE_ONLY][MULTISIG_REQUIRED]` Draft a containment proposal (pause,
   stop deposits) for human + multisig review via
   [`../recovery/containment-options.md`](../recovery/containment-options.md).
 - `[REVERSIBLE]` Reduce exposure: pause frontend / stop deposits using the
-  decision cards.
+  [`../decisions/pause-frontend.md`](../decisions/pause-frontend.md) and
+  [`../decisions/stop-deposits.md`](../decisions/stop-deposits.md) cards.
+- Record every decision and severity change in
+  [`../core/decision-log.md`](../core/decision-log.md).
 
 ## Risky actions
 

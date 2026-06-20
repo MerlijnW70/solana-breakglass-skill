@@ -21,7 +21,13 @@ Full definitions live in [`../core/severity-model.md`](../core/severity-model.md
 ```
 
 Stop at the first `yes`. If question 1 or 2 is even *possible* but unconfirmed,
-treat as SEV1 until ruled out.
+treat as SEV1 until ruled out — but "possible" means a **concrete loss
+indicator** (an unexplained on-chain outflow, an unknown signer, a confirmed
+unsafe signing prompt), not merely a worried question. A user asking "are my
+funds lost?" is a question, not evidence. A pure visibility mismatch — an
+explorer, RPC, and wallet disagreeing with **no unexplained on-chain movement**
+— is a SEV2/SEV3 read issue, not SEV1; see
+[`../incidents/rpc-degradation.md`](../incidents/rpc-degradation.md).
 
 ## Tempo by severity
 
