@@ -1,3 +1,11 @@
+---
+name: breakglass-for-solana
+description: Evidence-first crisis-operations skill for Solana founders and engineers. Use when triaging failed transactions, suspicious drains or unexplained fund movement, compromised upgrade/mint/freeze authorities, RPC degradation, frontend compromise, user wallet-safety questions, incident communications, recovery planning, or postmortems — or when the user types /breakglass or describes a Solana production incident. Read-only by default; never moves funds, submits transactions, or mutates authorities.
+license: MIT
+metadata:
+  version: 1.0.0
+---
+
 # Breakglass for Solana
 
 > The Solana emergency copilot.

@@ -2,6 +2,8 @@
 
 > The Solana emergency copilot.
 
+[![gate](https://github.com/MerlijnW70/solana-breakglass-skill/actions/workflows/gate.yml/badge.svg)](https://github.com/MerlijnW70/solana-breakglass-skill/actions/workflows/gate.yml)
+
 Breakglass for Solana is an evidence-first crisis operations skill for Solana
 founders and engineers. It helps AI coding agents triage failed transactions,
 suspicious drains, compromised authorities, RPC degradation, frontend
@@ -126,8 +128,9 @@ change; it must be grade A to be done.
 
 Static quality is enforced by the gate; **behavioral** quality (does the skill
 route, rank severity, and refuse correctly?) is checked by the repeatable
-blind-responder / independent-grader eval in [`eval/`](eval/README.md). Run it
-after changing skill behavior.
+blind-responder / independent-grader eval in [`eval/`](eval/README.md) — latest
+results: [`eval/RESULTS.md`](eval/RESULTS.md) (11/11). Run it after changing
+skill behavior.
 
 ## License
 

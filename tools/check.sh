@@ -133,16 +133,25 @@ bash_test() {
 }
 
 # === markdown dimensions ===================================================
+# Strip a leading YAML frontmatter block (--- ... ---) so the heading checks
+# below apply to the Markdown body. Files without leading frontmatter pass
+# through unchanged. Frontmatter is required of a distributable Agent Skill, so
+# SKILL.md carries one; the H1/heading rules still hold for the body.
+strip_frontmatter() {
+  awk 'NR==1 && $0=="---" {fm=1; next} fm==1 && $0=="---" {fm=0; next} fm!=1 {print}' "$1"
+}
+
 md_lint() {
-  local f firstline h1
+  local f firstline h1 body
   while IFS= read -r f; do
     [ -n "$f" ] || continue
-    firstline="$(grep -nm1 '[^[:space:]]' "$f" | cut -d: -f2- || true)"
+    body="$(strip_frontmatter "$f")"
+    firstline="$(printf '%s\n' "$body" | grep -nm1 '[^[:space:]]' | cut -d: -f2- || true)"
     case "$firstline" in
     '# '*) : ;;
-    *) fail "$f: first non-blank line must be a top-level '# ' heading" ;;
+    *) fail "$f: first non-blank line (after optional frontmatter) must be a top-level '# ' heading" ;;
     esac
-    h1="$(grep -c '^# ' "$f" || true)"
+    h1="$(printf '%s\n' "$body" | grep -c '^# ' || true)"
     if [ "$h1" -gt 1 ]; then
       fail "$f: $h1 top-level H1 headings (exactly one expected)"
     fi

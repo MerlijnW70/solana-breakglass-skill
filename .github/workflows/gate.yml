@@ -1,0 +1,27 @@
+name: gate
+
+# Runs the same quality gate locally enforced by nohalo. The nohalo tooling
+# itself is local-only (gitignored), but tools/check.sh is standalone pure Bash
+# with zero dependencies, so CI invokes it directly.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run quality gate (all dimensions)
+        shell: bash
+        run: |
+          set -euo pipefail
+          fail=0
+          for d in bash-build bash-lint bash-format md-lint md-format bash-test; do
+            echo "== $d =="
+            if ! bash tools/check.sh "$d"; then
+              fail=1
+            fi
+          done
+          exit "$fail"

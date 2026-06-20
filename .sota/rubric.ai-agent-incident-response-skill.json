@@ -1,0 +1,19 @@
+{
+  "domain": "ai-agent-incident-response-skill",
+  "version": 1,
+  "note": "Table-stakes for a published AI-agent domain skill (Claude Code / Agent Skill methodology). Content-domain (IR playbook) table-stakes are tracked separately and all met; the scoring axis here is the skill-engineering/distribution cluster, which is where the gaps are.",
+  "capabilities": [
+    { "id": "skill-entry-structure", "tier": "table-stakes", "test": "folder-per-skill with a SKILL.md entry point" },
+    { "id": "skill-frontmatter", "tier": "table-stakes", "test": "SKILL.md has YAML frontmatter with name + description stating what it does AND when to use it (trigger keywords)" },
+    { "id": "progressive-disclosure", "tier": "table-stakes", "test": "thin SKILL.md (<500 lines) that routes to reference modules loaded on demand" },
+    { "id": "license", "tier": "table-stakes", "test": "a license file is present" },
+    { "id": "readme-install", "tier": "table-stakes", "test": "human-written README with install and usage instructions" },
+    { "id": "in-skill-safety", "tier": "table-stakes", "test": "domain-appropriate safety/guardrail content inside the skill" },
+    { "id": "automated-tests", "tier": "table-stakes", "test": "automated structural/installability tests" },
+    { "id": "evaluations", "tier": "table-stakes", "test": "behavioral evaluations exist and results are reproducible/published" },
+    { "id": "plugin-marketplace-packaging", "tier": "edge", "test": ".claude-plugin/marketplace.json or .skill bundle for one-command install" },
+    { "id": "versioning", "tier": "edge", "test": "a version is recorded (frontmatter metadata or rubric version)" },
+    { "id": "ci-validation", "tier": "edge", "test": "CI runs the gate/tests on push" },
+    { "id": "mitre-attack-mapping", "tier": "edge", "test": "incident classes mapped to ATT&CK / a technique taxonomy (cross-cluster idea from the IR-template cluster)" }
+  ]
+}

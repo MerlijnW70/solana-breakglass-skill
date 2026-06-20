@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-20",
+  "mode": "standard",
+  "domains": ["ai-agent-incident-response-skill"],
+  "rubric_version": 1,
+  "cluster": {
+    "detected": "ai-agent-domain-skill",
+    "confidence": "high",
+    "why": "Breakglass is a progressive-disclosure Agent Skill (SKILL.md + routed modules) whose content domain is Solana incident response; its direct peers are other published domain skills, not human IR runbooks.",
+    "direct_comparators": ["anthropics/skills", "Sushegaad/Claude-Skills-Governance-Risk-and-Compliance", "sota-scan"],
+    "broader_references": ["counteractive/incident-response-plan-template", "aws-samples/aws-incident-response-playbooks", "austinsonger/Incident-Playbook", "PagerDuty/incident-response-docs", "monzo/response"],
+    "excluded": ["hesreallyhim/awesome-claude-code (index list)", "karanb192/awesome-claude-skills (index list)"]
+  },
+  "field": [
+    { "repo": "anthropics/skills", "type": "canonical", "stars": 153034, "pushed": "2026-06-09", "archived": false },
+    { "repo": "Sushegaad/Claude-Skills-Governance-Risk-and-Compliance", "type": "niche-relevant", "stars": 666, "pushed": "2026-06-17", "archived": false },
+    { "repo": "sota-scan", "type": "niche-relevant", "stars": null, "pushed": "2026-06-16", "archived": false, "note": "local peer; engineering bar" },
+    { "repo": "aws-samples/aws-incident-response-playbooks", "type": "reference", "stars": 1061, "pushed": "2026-06-18", "archived": false },
+    { "repo": "counteractive/incident-response-plan-template", "type": "stale-reference", "stars": 784, "pushed": "2024-05-07", "archived": false },
+    { "repo": "austinsonger/Incident-Playbook", "type": "stale-reference", "stars": 1575, "pushed": "2024-07-28", "archived": false }
+  ],
+  "matrix": [
+    { "id": "skill-entry-structure", "us": "met", "tier": "table-stakes" },
+    { "id": "skill-frontmatter", "us": "missing", "tier": "table-stakes" },
+    { "id": "progressive-disclosure", "us": "met", "tier": "table-stakes" },
+    { "id": "license", "us": "met", "tier": "table-stakes" },
+    { "id": "readme-install", "us": "met", "tier": "table-stakes" },
+    { "id": "in-skill-safety", "us": "met", "tier": "table-stakes" },
+    { "id": "automated-tests", "us": "met", "tier": "table-stakes" },
+    { "id": "evaluations", "us": "partial", "tier": "table-stakes" },
+    { "id": "plugin-marketplace-packaging", "us": "missing", "tier": "edge" },
+    { "id": "versioning", "us": "missing", "tier": "edge" },
+    { "id": "ci-validation", "us": "missing", "tier": "edge" },
+    { "id": "mitre-attack-mapping", "us": "missing", "tier": "edge" }
+  ],
+  "coverage": { "met": 6, "partial": 1, "missing": 1, "total": 8, "pct": 75 },
+  "tier": "COMPETITIVE",
+  "gaps_total": 2,
+  "content_cluster_note": "IR-playbook content table-stakes (roles/IC, comms, evidence handling, postmortem, contain->recover phases) are ALL met, plus an explicit SEV0-4 model stronger than any reference template and safety/guardrails the direct skill peers lack."
+}
