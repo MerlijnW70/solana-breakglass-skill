@@ -1,0 +1,10 @@
+# nohalo is kept local-only (not shared)
+.gate/
+.claude/
+CLAUDE.md
+AGENTS.md
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+*.swp
